@@ -12,7 +12,7 @@ const Search = (props) => {
         ?orderBy="title"&equalTo="${enteredFilter}"
         `;
         
-        fetch('https://searchreacthooks-default-rtdb.firebaseio.com/ingredients.json'+ query           
+        fetch('Your db api'+ query           
         )
         .then(resp => resp.json())
         .then(respData => {
@@ -22,7 +22,7 @@ const Search = (props) => {
                 ingreds.push({
                     id:key,
                     title:respData[key].title,
-                    amount:respData[key].amount
+                    
                 })
             }
             onLoadIngredients(ingreds)
